@@ -977,6 +977,7 @@ const (
 	ClusterProfileOpenStackOsuosl    ClusterProfile = "openstack-osuosl"
 	ClusterProfileOpenStackVexxhost  ClusterProfile = "openstack-vexxhost"
 	ClusterProfileOpenStackPpc64le   ClusterProfile = "openstack-ppc64le"
+	ClusterProfileOpenStackKuryr     ClusterProfile = "openstack-kuryr"
 	ClusterProfileOvirt              ClusterProfile = "ovirt"
 	ClusterProfilePacket             ClusterProfile = "packet"
 	ClusterProfileVSphere            ClusterProfile = "vsphere"
@@ -1011,6 +1012,7 @@ func ClusterProfiles() []ClusterProfile {
 		ClusterProfileOpenStackOsuosl,
 		ClusterProfileOpenStackVexxhost,
 		ClusterProfileOpenStackPpc64le,
+		ClusterProfileOpenStackKuryr,
 		ClusterProfileOvirt,
 		ClusterProfilePacket,
 		ClusterProfileVSphere,
@@ -1062,6 +1064,8 @@ func (p ClusterProfile) ClusterType() string {
 		return "openstack-vexxhost"
 	case ClusterProfileOpenStackPpc64le:
 		return "openstack-ppc64le"
+	case ClusterProfileOpenStackKuryr:
+		return "openstack-kuryr"
 	case ClusterProfileVSphere:
 		return "vsphere"
 	case ClusterProfileOvirt:
@@ -1117,6 +1121,8 @@ func (p ClusterProfile) LeaseType() string {
 		return "openstack-vexxhost-quota-slice"
 	case ClusterProfileOpenStackPpc64le:
 		return "openstack-ppc64le-quota-slice"
+	case ClusterProfileOpenStackKuryr:
+		return "openstack-kuryr"
 	case ClusterProfileOvirt:
 		return "ovirt-quota-slice"
 	case ClusterProfilePacket:
